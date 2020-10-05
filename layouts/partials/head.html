@@ -60,6 +60,9 @@
   loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
 
+{{ $iconfont := resources.Get "css/material-design-icons.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $iconfont.Permalink }}" integrity="{{ $iconfont.Data.Integrity }}" media="screen">
+
 {{ if .Params.enableMathJax }}
   {{ partial "mathjax.html" . }}
 {{ end }}
