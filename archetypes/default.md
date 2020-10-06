@@ -1,12 +1,10 @@
 ---
-title: ""
+title: 
 date: 
-description: ""
-tags: []
-featured_image: ""
-# images is optional, but needed for showing Twitter Card
-images: []
+description: 
 categories: 
-comment : true
+tags: []
+featured_image: 
+comment: true
 draft: true
 ---
