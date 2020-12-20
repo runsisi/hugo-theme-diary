@@ -8,5 +8,5 @@
 	{{ if .Site.Copyright }}
 	{{ .Site.Copyright }}
 	{{ else }}
-	{{.Site.Home.Date.Year}} {{.Site.Title}}
+	{{ dateFormat "2006" now }} {{.Site.Title}}
 	{{ end }}
