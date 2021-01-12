@@ -34,8 +34,9 @@
 
                         {{ if .Params.categories }}
                             <i class="material-icons" style="">folder</i>
-                                <a href="{{ "/categories/" | relLangURL }}{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
-                                &nbsp;
+                            {{ range .Params.categories }}
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                            {{ end }}
                         {{ end }}
 
                         {{ if gt .Params.tags 0 }}
